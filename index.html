@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Add your logo image here -->
+            <img src="kisspng-imdb-logo-television-film-imdb-5b2337c42bddd3.2343184015290346921797.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Movies</h1>
+                <form onsubmit="event.preventDefault(); getMovies()">
+                    <input type="search" id="valueMovie" name="search" placeholder="Search...">
+                    <select id="yearSelect">
+                        <label for="yearSelect">Select a year:</label>
+                        <!-- You can dynamically populate this dropdown with a range of years using JavaScript if needed -->
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="all">All</option>
+                        <!-- Add more years as needed -->
+                    </select>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search Results</h2>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
